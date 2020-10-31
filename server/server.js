@@ -9,7 +9,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
+const feelingRouter = require('./routes/feeling.router.js');
+app.use('/api/feeling', feelingRouter);
 
+const understandingRouter = require('./routes/understanding.router.js');
+app.use('/api/understanding', understandingRouter);
+
+const supportRouter = require('./routes/support.router.js');
+app.use('/api/support', supportRouter);
+
+const commentsRouter = require('./routes/comments.router.js');
+app.use('/api/comments', commentsRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
