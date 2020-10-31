@@ -22,7 +22,7 @@ For this assignment, you will be creating a reflection/feedback form modeled aft
 
 ### ADD NEW FEEDBACK
 
-> NOTE: As a baseline requirement, you must use Redux to store your data across views.
+[x]> NOTE: As a baseline requirement, you must use Redux to store your data across views.
 
 Create a multi-part form that allows users to leave feedback for today. 
 There will be 4 views for the form parts.
