@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import { HashRouter as Router, Route, Link, withRouter } from 'react-router-dom';
 import './App.css';
-import Feeling from '../Feeling/Feeling'
+import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
+import Support from '../Support/Support';
 
 
 class App extends Component {
@@ -39,6 +40,7 @@ class App extends Component {
             {/* <Route exact path="/" component={Home}/> */}
             <Route path="/feeling" component={Feeling}/>
             <Route path="/understanding" component={Understanding}/>
+            <Route path="/support" component={Support}/>
           
         <br/>
       </div>
