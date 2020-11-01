@@ -7,6 +7,7 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import feedbackReview from '../feedbackReview/feedbackReview';
 
 class App extends Component {
 
@@ -42,6 +43,7 @@ class App extends Component {
             <Route path="/understanding" component={Understanding}/>
             <Route path="/support" component={Support}/>
             <Route path="/comments" component={Comments}/>
+            <Route path="/feedbackReview" component={feedbackReview}/>
           
         <br/>
       </div>
