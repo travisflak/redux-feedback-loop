@@ -7,12 +7,19 @@ class Support extends Component {
         support: 0
     };
     
-    handleChangedSupport = ( event ) => { 
-            this.props.dispatch({
-            type: 'SET_SUPPORT',
-            payload: this.state.support
+    handleChangedSupport = ( event ) => {
+
+      if(this.state.support < 1 || this.state.support > 5){
+        
+        alert('must be between 1 and 5')
+        }
+        else {            
+          this.props.dispatch({
+          type: 'SET_SUPPORT',
+          payload: this.state.support
         })
-        this.props.history.push('/comments')
+          this.props.history.push('/comments')
+        }
       }
 
 

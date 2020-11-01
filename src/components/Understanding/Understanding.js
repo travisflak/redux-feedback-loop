@@ -8,12 +8,19 @@ class Understanding extends Component {
     };
 
     handleChangedUnderstanding = ( event ) => { 
-        this.props.dispatch({
-        type: 'SET_UNDERSTANDING',
-        payload: this.state.understanding
-    })
-    this.props.history.push('/support')
-  }
+        if(this.state.understanding < 1 || this.state.understanding > 5){
+        
+            alert('must be between 1 and 5')
+            }
+            else {            
+              this.props.dispatch({
+              type: 'SET_UNDERSTANDING',
+              payload: this.state.understanding
+            })
+              this.props.history.push('/support')
+            }
+          }
+
     render() {
         return (
             <>
