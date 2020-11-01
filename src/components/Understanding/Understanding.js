@@ -2,12 +2,33 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Understanding extends Component {
+
+    state = {
+        understanding: 0
+    };
+
+    handleChangedUnderstanding = ( event ) => { 
+        this.props.dispatch({
+        type: 'SET_UNDERSTANDING',
+        payload: this.state.understanding
+    })
+    this.props.history.push('/support')
+  }
     render() {
         return (
-            <p>Understanding</p>
+            <>
+            <h1>How well are you understanding the content?</h1>
+            <p>Understanding?</p>
+            <input type="number" onChange={(event) => this.setState({understanding:event.target.value})}/>
+            <button onClick={this.handleChangedUnderstanding}>NEXT</button>
+            </>
         )
     }
 }
 
-
-export default connect()(Understanding);
+const mapStateToProps = (reduxState) => {
+    return {
+      reduxState
+    }
+  }
+export default connect(mapStateToProps)(Understanding);

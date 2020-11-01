@@ -8,9 +8,9 @@ import Feeling from '../Feeling/Feeling'
 
 class App extends Component {
 
-  componentDidMount() { // react Component method
+  // componentDidMount() { // react Component method
     // this.getFeeling();
-  }
+  // }
   // getFeeling = () => {
   //   // just like $.ajax()
   //   axios({
@@ -33,9 +33,9 @@ class App extends Component {
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
         </header>
-        <Router>
-        {/* <Route exact path="/" component={Home}/> */}
-          <Route path="/feeling" component={Feeling}/>
+          <Router>
+            {/* <Route exact path="/" component={Home}/> */}
+            <Route path="/feeling" component={Feeling}/>
           </Router>
         <br/>
       </div>
