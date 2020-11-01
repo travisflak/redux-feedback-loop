@@ -16,8 +16,9 @@ class feedbackReview extends Component {
         console.log(`Adding Data`, newData);
         // TODO - axios request to server to add data
         Axios.post('/api/feeling', newData).then ((response) =>{
-          console.log(response.data);
-          this.props.getData();
+          console.log('in axios POST', response.data);
+        //   this.props.getData();
+          this.props.history.push('/ThankYou')
         }).catch((error) => {
             console.log(error);  
         });

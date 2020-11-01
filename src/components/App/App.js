@@ -8,26 +8,9 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import feedbackReview from '../feedbackReview/feedbackReview';
+import ThankYou from '../ThankYou/ThankYou';
 
 class App extends Component {
-
-  // componentDidMount() { // react Component method
-    // this.getFeeling();
-  // }
-  // getFeeling = () => {
-  //   // just like $.ajax()
-  //   axios({
-  //     method: 'GET',
-  //     url: '/api/feeling'
-  //   }).then((response) => {
-  //     console.log(response);
-  //     this.props.dispatch({ type: 'SET_FEELING', payload: response.data})
-  //     // response.data will be the array
-  //     this.setState({
-  //       feeling: response.data,
-  //     });
-  //   });
-  // }
 
   render() {
     return (
@@ -44,6 +27,7 @@ class App extends Component {
             <Route path="/support" component={Support}/>
             <Route path="/comments" component={Comments}/>
             <Route path="/feedbackReview" component={feedbackReview}/>
+            <Route path="/ThankYou" component={ThankYou}/>
           
         <br/>
       </div>

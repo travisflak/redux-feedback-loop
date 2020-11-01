@@ -8,11 +8,18 @@ class Feeling extends Component {
     };
     
     handleChangedFeeling = ( event ) => { 
-            this.props.dispatch({
-            type: 'SET_FEELING',
-            payload: this.state.feeling
+
+        if(this.state.feeling < 1 || this.state.feeling > 5){
+        
+        alert('must be between 1 and 5')
+        }
+        else {            
+          this.props.dispatch({
+          type: 'SET_FEELING',
+          payload: this.state.feeling
         })
-        this.props.history.push('/understanding')
+          this.props.history.push('/understanding')
+        }
       }
 
 
