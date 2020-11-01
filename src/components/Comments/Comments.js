@@ -7,7 +7,9 @@ class Comments extends Component {
         comments: ''
     };
     
-    handleChangedComments = ( event ) => { 
+    handleChangedComments = ( event ) => {
+        console.log('in comments js', this.state.comments);
+         
             this.props.dispatch({
             type: 'SET_COMMENTS',
             payload: this.state.comments

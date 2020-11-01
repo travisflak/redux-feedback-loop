@@ -19,7 +19,7 @@ const feelingReducer = (state = 0, action) => {
 
 const understandingReducer = (state = 0, action) => {
 
-    if(action.type === 'SET_FEELING') {
+    if(action.type === 'SET_UNDERSTANDING') {
         return action.payload;
     }
     else{
@@ -29,7 +29,7 @@ const understandingReducer = (state = 0, action) => {
 
 const supportReducer = (state = 0, action) => {
 
-    if(action.type === 'SET_FEELING') {
+    if(action.type === 'SET_SUPPORT') {
         return action.payload;
     }
     else{
@@ -38,8 +38,9 @@ const supportReducer = (state = 0, action) => {
 } 
 
 const commentsReducer = (state = '', action) => {
-
-    if(action.type === 'SET_FEELING') {
+    console.log('in comments reducer', state);
+    
+    if(action.type === 'SET_COMMENTS') {
         return action.payload;
     }
     else{

@@ -5,12 +5,19 @@ import Axios from 'axios';
 class feedbackReview extends Component {
 
     handleSubmit = (event) => {
+        let newData = {
+            feeling: this.props.reduxState.feelingReducer,
+            understanding: this.props.reduxState.understandingReducer,
+            support: this.props.reduxState.supportReducer,
+            comments: this.props.reduxState.commentsReducer
+        }
+
         event.preventDefault();
-        console.log(`Adding Data`, this.state.newBook);
-        // TODO - axios request to server to add book
-        Axios.post('/books', this.state.newBook).then ((response) =>{
+        console.log(`Adding Data`, newData);
+        // TODO - axios request to server to add data
+        Axios.post('/api/feeling', newData).then ((response) =>{
           console.log(response.data);
-          this.props.getBooks();
+          this.props.getData();
         }).catch((error) => {
             console.log(error);  
         });
