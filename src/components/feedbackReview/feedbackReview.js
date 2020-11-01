@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 
 class feedbackReview extends Component {
     
-    handleChangedComments = ( event ) => { 
+    submitButton = ( event ) => { 
             this.props.dispatch({
             type: 'SET_FEEDBACK',
-            payload: this.state.comments
+            payload: this.state.feedbackReview
         })
         this.props.history.push('/feeling')
       }
@@ -15,10 +15,8 @@ class feedbackReview extends Component {
     render() {
         return (
             <>
-                <h1>Any comments you want to leave?</h1>
-                <p>Comments</p>
-                <input type="text" onChange={(event) => this.setState({comments:event.target.value})}/>
-                <button onClick={this.handleChangedComments}>NEXT</button>
+                <h1>Review Your Feedback</h1>
+                <button onClick={this.submitButton}>Submit</button>
             </>
         )
     }

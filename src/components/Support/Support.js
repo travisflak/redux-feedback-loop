@@ -21,7 +21,7 @@ class Support extends Component {
             <>
                 <h1>How well are you being supported?</h1>
                 <p>Support?</p>
-                <input type="number" onChange={(event) => this.setState({support:event.target.value})}/>
+                <input type="number" min={1} max={5} onChange={(event) => this.setState({support:event.target.value})}/>
                 <button onClick={this.handleChangedSupport}>NEXT</button>
             </>
         )

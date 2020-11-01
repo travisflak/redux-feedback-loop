@@ -21,7 +21,7 @@ class Feeling extends Component {
             <>
                 <h1>How are you feeling today?</h1>
                 <p>Feeling?</p>
-                <input type="number" onChange={(event) => this.setState({feeling:event.target.value})}/>
+                <input type="number" min={1} max={5} onChange={(event) => this.setState({feeling:event.target.value})}/>
                 <button onClick={this.handleChangedFeeling}>NEXT</button>
             </>
         )
