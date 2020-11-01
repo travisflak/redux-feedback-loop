@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Axios from 'axios';
 
 class feedbackReview extends Component {
-    
-    submitButton = ( event ) => { 
-            this.props.dispatch({
-            type: 'SET_FEEDBACK',
-            payload: this.state.feedbackReview
-        })
-        this.props.history.push('/feeling')
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(`Adding Data`, this.state.newBook);
+        // TODO - axios request to server to add book
+        Axios.post('/books', this.state.newBook).then ((response) =>{
+          console.log(response.data);
+          this.props.getBooks();
+        }).catch((error) => {
+            console.log(error);  
+        });
       }
 
 
@@ -16,7 +21,13 @@ class feedbackReview extends Component {
         return (
             <>
                 <h1>Review Your Feedback</h1>
-                <button onClick={this.submitButton}>Submit</button>
+                <ul>
+                    <li>{this.props.reduxState.feelingReducer}</li>
+                    <li>{this.props.reduxState.understandingReducer}</li>
+                    <li>{this.props.reduxState.supportReducer}</li>
+                    <li>{this.props.reduxState.commentsReducer}</li>
+                </ul>
+                <button onClick={(event) => this.handleSubmit(event)} type='submit'>Submit</button>
             </>
         )
     }
