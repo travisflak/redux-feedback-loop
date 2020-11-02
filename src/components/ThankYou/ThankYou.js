@@ -16,7 +16,7 @@ class ThankYou extends Component{
   
   } 
 
-  ender() {
+  render() {
     return (
           <>
             <h1>THANK YOU!</h1>
