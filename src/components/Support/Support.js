@@ -22,6 +22,11 @@ class Support extends Component {
         }
       }
 
+      handleBackButton = ( event ) => {
+
+        this.props.history.push('/understanding')
+  
+      }
 
     render() {
         return (
@@ -30,6 +35,7 @@ class Support extends Component {
                 <p>Support?</p>
                 <input type="number" min={1} max={5} onChange={(event) => this.setState({support:event.target.value})}/>
                 <button onClick={this.handleChangedSupport}>NEXT</button>
+                <button onClick={this.handleBackButton}>BACK</button>
             </>
         )
     }

@@ -17,6 +17,12 @@ class Comments extends Component {
         this.props.history.push('/feedbackReview')
       }
 
+      handleBackButton = ( event ) => {
+
+        this.props.history.push('/support')
+  
+      }
+
 
     render() {
         return (
@@ -25,6 +31,7 @@ class Comments extends Component {
                 <p>Comments</p>
                 <input type="text" onChange={(event) => this.setState({comments:event.target.value})}/>
                 <button onClick={this.handleChangedComments}>NEXT</button>
+                <button onClick={this.handleBackButton}>BACK</button>
             </>
         )
     }

@@ -8,11 +8,18 @@ class ThankYou extends Component{
         this.props.history.push('/feeling')
       }
 
+    handleBackButton = ( event ) => {
+
+      this.props.history.push('/feedbackReview')
+  
+    } 
+
     render() {
         return (
             <>
                 <h1>THANK YOU!</h1>
                 <button onClick={this.handleChangedNewFeedback}>Leave New Feedback</button>
+                <button onClick={this.handleBackButton}>BACK</button>
             </>
         )
     }

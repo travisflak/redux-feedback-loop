@@ -24,6 +24,12 @@ class feedbackReview extends Component {
         });
       }
 
+      handleBackButton = ( event ) => {
+
+        this.props.history.push('/comments')
+  
+      }
+
 
     render() {
         return (
@@ -36,6 +42,7 @@ class feedbackReview extends Component {
                     <li>{this.props.reduxState.commentsReducer}</li>
                 </ul>
                 <button onClick={(event) => this.handleSubmit(event)} type='submit'>Submit</button>
+                <button onClick={this.handleBackButton}>BACK</button>
             </>
         )
     }

@@ -22,7 +22,6 @@ class Feeling extends Component {
         }
       }
 
-
     render() {
         return (
             <>

@@ -21,6 +21,12 @@ class Understanding extends Component {
             }
           }
 
+          handleBackButton = ( event ) => {
+
+            this.props.history.push('/feeling')
+      
+          }
+
     render() {
         return (
             <>
@@ -28,6 +34,7 @@ class Understanding extends Component {
             <p>Understanding?</p>
             <input type="number" min={1} max={5} onChange={(event) => this.setState({understanding:event.target.value})}/>
             <button onClick={this.handleChangedUnderstanding}>NEXT</button>
+            <button onClick={this.handleBackButton}>BACK</button>
             </>
         )
     }
