@@ -29,7 +29,6 @@ class Comments extends Component {
         return (
             <>
                 <h1>Any comments you want to leave?</h1>
-                <p>Comments</p>
                 <input type="text" onChange={(event) => this.setState({comments:event.target.value})}/>
                 <Button color="primary" onClick={this.handleChangedComments}>NEXT</Button>
                 <Button color="secondary" onClick={this.handleBackButton}>BACK</Button>
