@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
 
 class Support extends Component {
 
@@ -34,8 +35,8 @@ class Support extends Component {
                 <h1>How well are you being supported?</h1>
                 <p>Support?</p>
                 <input type="number" min={1} max={5} onChange={(event) => this.setState({support:event.target.value})}/>
-                <button onClick={this.handleChangedSupport}>NEXT</button>
-                <button onClick={this.handleBackButton}>BACK</button>
+                <Button color="primary" onClick={this.handleChangedSupport}>NEXT</Button>
+                <Button color="secondary" onClick={this.handleBackButton}>BACK</Button>
             </>
         )
     }

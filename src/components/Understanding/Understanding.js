@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
 
 class Understanding extends Component {
 
@@ -33,8 +34,8 @@ class Understanding extends Component {
             <h1>How well are you understanding the content?</h1>
             <p>Understanding?</p>
             <input type="number" min={1} max={5} onChange={(event) => this.setState({understanding:event.target.value})}/>
-            <button onClick={this.handleChangedUnderstanding}>NEXT</button>
-            <button onClick={this.handleBackButton}>BACK</button>
+            <Button color="primary" onClick={this.handleChangedUnderstanding}>NEXT</Button>
+            <Button color="secondary" onClick={this.handleBackButton}>BACK</Button>
             </>
         )
     }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
+
 
 class ThankYou extends Component{
 
@@ -18,8 +20,8 @@ class ThankYou extends Component{
         return (
             <>
                 <h1>THANK YOU!</h1>
-                <button onClick={this.handleChangedNewFeedback}>Leave New Feedback</button>
-                <button onClick={this.handleBackButton}>BACK</button>
+                <Button color="primary" onClick={this.handleChangedNewFeedback}>Leave New Feedback</Button>
+                <Button color="secondary" onClick={this.handleBackButton}>BACK</Button>
             </>
         )
     }

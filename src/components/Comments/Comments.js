@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
 
 class Comments extends Component {
 
@@ -30,8 +31,8 @@ class Comments extends Component {
                 <h1>Any comments you want to leave?</h1>
                 <p>Comments</p>
                 <input type="text" onChange={(event) => this.setState({comments:event.target.value})}/>
-                <button onClick={this.handleChangedComments}>NEXT</button>
-                <button onClick={this.handleBackButton}>BACK</button>
+                <Button color="primary" onClick={this.handleChangedComments}>NEXT</Button>
+                <Button color="secondary" onClick={this.handleBackButton}>BACK</Button>
             </>
         )
     }
