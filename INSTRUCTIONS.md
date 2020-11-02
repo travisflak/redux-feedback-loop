@@ -69,7 +69,7 @@ While there is no nav bar, each part of the form should be at its own route. Cli
 [x]Allow the user to go back to a previous step and change their score. You still need to disallow empty values!
 
 ### STYLING
-Improve the styling of the app using Material-UI. This might inclued cards, snackbars, buttons, a nav bar, icons, and/or a theme. 
+[x]Improve the styling of the app using Material-UI. This might inclued cards, snackbars, buttons, a nav bar, icons, and/or a theme. 
 
 ### ADMIN SECTION
 

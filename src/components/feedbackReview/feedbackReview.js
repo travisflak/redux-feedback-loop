@@ -18,18 +18,17 @@ class feedbackReview extends Component {
         // TODO - axios request to server to add data
         Axios.post('/api/feeling', newData).then ((response) =>{
           console.log('in axios POST', response.data);
-        //   this.props.getData();
           this.props.history.push('/ThankYou')
         }).catch((error) => {
             console.log(error);  
         });
-      }
+    }
 
-      handleBackButton = ( event ) => {
+    handleBackButton = ( event ) => {
 
-        this.props.history.push('/comments')
+    this.props.history.push('/comments')
   
-      }
+    }
 
 
     render() {
@@ -54,4 +53,5 @@ const mapStateToProps = (reduxState) => {
       reduxState
     }
   }
+
 export default connect(mapStateToProps)(feedbackReview);

@@ -5,24 +5,24 @@ import { Button } from '@material-ui/core';
 
 class ThankYou extends Component{
 
-    handleChangedNewFeedback = ( event ) => {
+  handleChangedNewFeedback = ( event ) => {
          
-        this.props.history.push('/feeling')
-      }
+      this.props.history.push('/feeling')
+  }
 
-    handleBackButton = ( event ) => {
+  handleBackButton = ( event ) => {
 
-      this.props.history.push('/feedbackReview')
+    this.props.history.push('/feedbackReview')
   
-    } 
+  } 
 
-    render() {
-        return (
-            <>
-                <h1>THANK YOU!</h1>
-                <Button color="primary" onClick={this.handleChangedNewFeedback}>Leave New Feedback</Button>
-                <Button color="secondary" onClick={this.handleBackButton}>BACK</Button>
-            </>
+  ender() {
+    return (
+          <>
+            <h1>THANK YOU!</h1>
+            <Button variant="contained" color="primary" onClick={this.handleChangedNewFeedback}>Leave New Feedback</Button>
+            <Button variant="contained" color="secondary" onClick={this.handleBackButton}>BACK</Button>
+          </>
         )
     }
 }
@@ -33,4 +33,5 @@ const mapStateToProps = (reduxState) => {
       reduxState
     }
   }
+
 export default connect(mapStateToProps)(ThankYou);

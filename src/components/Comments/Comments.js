@@ -11,18 +11,18 @@ class Comments extends Component {
     handleChangedComments = ( event ) => {
         console.log('in comments js', this.state.comments);
          
-            this.props.dispatch({
-            type: 'SET_COMMENTS',
-            payload: this.state.comments
-        })
+    this.props.dispatch({
+        type: 'SET_COMMENTS',
+        payload: this.state.comments
+    })
         this.props.history.push('/feedbackReview')
-      }
+    }
 
-      handleBackButton = ( event ) => {
+    handleBackButton = ( event ) => {
 
         this.props.history.push('/support')
   
-      }
+    }
 
 
     render() {
@@ -42,4 +42,5 @@ const mapStateToProps = (reduxState) => {
       reduxState
     }
   }
+
 export default connect(mapStateToProps)(Comments);
